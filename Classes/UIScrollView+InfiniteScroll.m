@@ -79,6 +79,10 @@ static const void *kPBInfiniteScrollStateKey = &kPBInfiniteScrollStateKey;
  *  Indicator style when UIActivityIndicatorView used.
  */
 @property (nonatomic) UIActivityIndicatorViewStyle indicatorStyle;
+/**
+ *
+ */
+@property (nonatomic) UIColor* activityIndicatorViewTintColor;
 
 /**
  *  Flag used to return user back to start of scroll view
@@ -255,7 +259,9 @@ static const void *kPBInfiniteScrollStateKey = &kPBInfiniteScrollStateKey;
 - (UIActivityIndicatorViewStyle)infiniteScrollIndicatorStyle {
     return self.pb_infiniteScrollState.indicatorStyle;
 }
-
+- (void)setActivityIndicatorViewTintColor:(UIColor*)tintColorValue {
+    self.pb_infiniteScrollState.activityIndicatorViewTintColor = tintColorValue;
+}
 - (void)setInfiniteScrollIndicatorView:(UIView *)indicatorView {
     // make sure indicator is initially hidden
     indicatorView.hidden = YES;

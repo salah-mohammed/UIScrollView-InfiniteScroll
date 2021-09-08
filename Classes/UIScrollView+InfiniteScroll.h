@@ -34,6 +34,8 @@ typedef NS_ENUM(NSUInteger, InfiniteScrollDirection) {
  */
 @interface UIScrollView (InfiniteScroll)
 
+@property (nonatomic) UIColor* activityIndicatorViewTintColor;
+
 /**
  * The direction that the infinite scroll should work in (default: InfiniteScrollDirectionVertical).
  */
